@@ -22,7 +22,9 @@ The logistic regression model has been implemented using the scikit-learn pre-bu
 
 3. Multi Layer Perceptron:
 
-With that said our best model is MLP with accuracy as:  
+The MLP implementation for POS tagging was done using a 3-hidden layer network. The features were input by converting each word in embeddings using the GloVe model. Each word embedding was a 25-dimensional vector and the labels for each of these vectors we one-hot encoded with 44 classes. The network was trained using Cross Entropy Loss and Stochastic Gradient Descent optimizer. The initial classification output was about 90%. The network was further improved using the windowing technique where for any given word two predecessors and two successors were considered to bring context into the picture. In addition, the word embedding vector dimension was increased to 200. With these additions, we were able to achieve an accuracy of 95.71% on the validation set and 95.41% on the testing dataset. This model achieved the best accuracy among the three algorithms we tried.
+
+With that said our best model is MLP with accuracy as: Accuracy of 95.71% on the validation set and 95.41% on the testing dataset
 
 
 ## Labelled Test Data:
